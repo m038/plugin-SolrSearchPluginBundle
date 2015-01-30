@@ -28,10 +28,10 @@ class SearchController extends Controller
     public function searchAction(Request $request, $language = null)
     {
         $helper = $this->get('newscoop_solrsearch_plugin.helper');
+        $parameters = $request->query->all();
 
         if ($helper->getConfigValue('index_type') == SolrHelperService::INDEX_AND_DATA) {
 
-            $parameters = $request->query->all();
             $searchParam = trim($request->query->get('q'));
 
             // Check for webcode and redirect
