@@ -29,6 +29,7 @@ class SearchResultsSolrList extends PaginatedBaseList
         if ($language instanceof \Newscoop\Entity\Language) {
             $criteria->core = $language->getRFC3066bis();
         }
+
         try {
             $result = $service->find($this->convertCriteriaToQuery($criteria));
         } catch (\Exception $e) {
