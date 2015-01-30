@@ -50,7 +50,7 @@ class ConfigureMenuListener
 
             $menu = $event->getMenu();
             $labelPlugins = $this->translator->trans('Plugins');
-            $labelPluginName = $this->translator->trans('plugins.solr.menu.main');
+            $labelPluginName = $this->translator->trans('plugin.solr.menu.main');
 
             $menu[$labelPlugins]
                 ->addChild(
@@ -62,15 +62,15 @@ class ConfigureMenuListener
 
             if ($hasStatus) {
                 $menu[$labelPlugins][$labelPluginName]->addChild(
-                    $this->translator->trans('plugins.solr.menu.status'),
+                    $this->translator->trans('plugin.solr.menu.status'),
                     array('uri' => $statusUri)
                 );
             }
 
             if ($hasSettings) {
                 $menu[$labelPlugins][$labelPluginName]->addChild(
-                    $this->translator->trans('plugins.solr.menu.settings'),
-                    array('uri' => $settingUri)
+                    $this->translator->trans('plugin.solr.menu.settings'),
+                    array('uri' => $settingsUrl)
                 );
             }
         }

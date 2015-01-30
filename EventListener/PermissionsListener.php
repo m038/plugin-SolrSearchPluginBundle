@@ -31,9 +31,9 @@ class PermissionsListener
      */
     public function registerPermissions(PluginPermissionsEvent $event)
     {
-        $event->registerPermissions($this->translator->trans('plugins.solr.permissions.label'), array(
-            'plugin_solr_status' => $this->translator->trans('plugins.solr.permissions.status'),
-            'plugin_solr_settings' => $this->translator->trans('plugins.solr.permissions.settings')
+        $event->registerPermissions($this->translator->trans('plugin.solr.permissions.label'), array(
+            'plugin_solr_status' => $this->translator->trans('plugin.solr.permissions.status'),
+            'plugin_solr_settings' => $this->translator->trans('plugin.solr.permissions.settings')
         ));
     }
 }
