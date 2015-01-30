@@ -31,7 +31,11 @@
                     {% for core in cores %}
                         <tr>
                             <td>{{ core.name }}</td>
-                            <td>{{ core.lastModified|date('d-m-Y H:i') }}</td>
+                            <td>{% if core.lastModified is defined %}
+                                {{ core.lastModified|date('d-m-Y H:i') }}
+                            {% else %}
+                                N/A
+                            {% endif %}</td>
                             <td>{{ core.numDocs|number_format }}</td>
                             <td>{{ core.version|number_format }}</td>
                             <td title="{{ core.lastModified|date('d-m-Y H:i') }}">{{ core.uptime|date('z h') }}</td>
