@@ -38,7 +38,7 @@
                             {% endif %}</td>
                             <td>{{ core.numDocs|number_format }}</td>
                             <td>{{ core.version|number_format }}</td>
-                            <td title="{{ core.lastModified|date('d-m-Y H:i') }}">{{ core.uptime|date('z h') }}</td>
+                            <td>{{ core.uptime|date('z h') }}</td>
                             <td>{% if core.size is defined %}
                                 {{ core.size }}
                             {% else %}
