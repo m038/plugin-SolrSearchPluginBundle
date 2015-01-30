@@ -19,7 +19,6 @@ use Newscoop\NewscoopException;
 use Newscoop\SolrSearchPluginBundle\Search\SolrQuery;
 use Newscoop\SolrSearchPluginBundle\Services\SolrHelperService;
 
-
 class SearchController extends Controller
 {
     /**
