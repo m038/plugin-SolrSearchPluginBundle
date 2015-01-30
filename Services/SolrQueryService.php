@@ -40,20 +40,6 @@ class SolrQueryService
     );
 
     /**
-     * @var array
-     */
-    // TODO: Make this configurable
-    protected $types = array(
-        'article' => array('news', 'newswire'),
-        'dossier' => 'dossier',
-        'blog' => 'blog',
-        'comment' => 'comment',
-        'link' => 'link',
-        'event' => 'event',
-        'user' => 'user',
-    );
-
-    /**
      * @var Newscoop\SolrSearchPluginBundle\Services\SolrHelperService
      */
     private $helper;
