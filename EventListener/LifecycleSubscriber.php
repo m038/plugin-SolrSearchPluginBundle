@@ -91,7 +91,7 @@ class LifecycleSubscriber implements EventSubscriberInterface
      */
     private function setPermissions()
     {
-        $this->pluginsService->savePluginPermissions($this->pluginsService->collectPermissions($this->translator->trans('plugins.solr.permissions.label')));
+        $this->pluginsService->savePluginPermissions($this->pluginsService->collectPermissions($this->translator->trans('plugin.solr.permissions.label')));
     }
 
     /**
@@ -99,6 +99,6 @@ class LifecycleSubscriber implements EventSubscriberInterface
      */
     private function removePermissions()
     {
-        $this->pluginsService->removePluginPermissions($this->pluginsService->collectPermissions($this->translator->trans('plugins.solr.permissions.label')));
+        $this->pluginsService->removePluginPermissions($this->pluginsService->collectPermissions($this->translator->trans('plugin.solr.permissions.label')));
     }
 }
