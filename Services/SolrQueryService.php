@@ -192,7 +192,7 @@ class SolrQueryService
             $decoded['responseHeader']['params']['q_topic'] = null;
 
             if ($this->request->get('q') !== '') {
-                $topic = $this->topicService->getTopicByIdOrName($this->request->get('q'), 5);
+                $topic = $this->topicService->getTopicByFullName(sprintf('%s:de', $this->request->get('q')));
                 if ($topic !== null) {
                     $decoded['responseHeader']['params']['q_topic'] = $topic->getName();
                 }
