@@ -7,7 +7,7 @@
 
     {% set submitButton = form_widget(form.save, {'attr' : {'class' : 'btn btn-primary'} }) %}
 
-    {# {{ form_errors(form) }} #}
+    {{ form_errors(form) }}
 
     {{ form_row(form.enabled) }}
 
