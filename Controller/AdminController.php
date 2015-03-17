@@ -142,7 +142,7 @@ class AdminController extends Controller
         }
 
         return array(
-            'form' => $form
+            'form' => $form->createView()
         );
     }
 }
