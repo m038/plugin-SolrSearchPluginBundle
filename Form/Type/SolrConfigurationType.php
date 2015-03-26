@@ -14,10 +14,10 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddMainFieldsSubscriber;
+use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddDefaultCoreFieldSubscriber;
 use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddArticleTypeFieldSubscriber;
 use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddCusomCronFieldSubscriber;
-use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddDefaultCoreFieldSubscriber;
-use Newscoop\SolrSearchPluginBundle\Form\EventListener\AddMainFieldsSubscriber;
 
 class SolrConfigurationType extends AbstractType
 {
