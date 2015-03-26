@@ -179,7 +179,7 @@ class SolrQueryService
     {
         $decoded = json_decode($response, true);
 
-        if ($this->helper->getConfigValue('index_type') == SolrHelperService::INDEX_AND_DATA) {
+        if ($this->helper->getConfigValue('index_type') == SolrHelperService::INDEX_AND_DATA && $this->request) {
 
             $decoded['responseHeader']['params']['q'] = $this->request->get('q'); // this might be modified, keep users query
             $decoded['responseHeader']['params']['date'] = $this->request->get('date');
