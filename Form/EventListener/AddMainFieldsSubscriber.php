@@ -54,6 +54,15 @@ class AddMainFieldsSubscriber implements EventSubscriberInterface
                         'help_text' => 'plugin.solr.admin.form.help_text.port'
                     )
                 ))
+                ->add('suffix_uri', 'text', array(
+                    'label' => 'plugin.solr.admin.form.label.suffix_uri',
+                    'required' => true,
+                    'attr' => array(
+                        'class' => 'auto-submit',
+                        'empty_data' => 'solr',
+                        'help_text' => 'plugin.solr.admin.form.help_text.suffix_uri'
+                    )
+                ))
                 ->add('query_uri', 'text', array(
                     'label' => 'plugin.solr.admin.form.label.query_uri',
                     'required' => true,

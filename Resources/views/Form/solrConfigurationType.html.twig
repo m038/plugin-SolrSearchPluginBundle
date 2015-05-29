@@ -20,6 +20,9 @@
     {% if form.port is defined %}
         {{ form_row(form.port) }}
     {% endif %}
+    {% if form.suffix_uri is defined %}
+        {{ form_row(form.suffix_uri) }}
+    {% endif %}
     {% if form.default_core is defined %}
         {{ form_row(form.default_core) }}
     {% endif %}

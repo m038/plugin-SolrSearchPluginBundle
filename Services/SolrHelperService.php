@@ -63,7 +63,7 @@ class SolrHelperService
      */
     public function getBaseUrl()
     {
-        return sprintf('http://%s:%s/solr', $this->getConfigValue('host'), $this->getConfigValue('port'));
+        return sprintf('http://%s:%s/%s', $this->getConfigValue('host'), $this->getConfigValue('port'), ltrim($this->getConfigValue('suffix_uri'), '/'));
     }
 
     /**
@@ -98,7 +98,7 @@ class SolrHelperService
      */
     public function getQueryUrl($core = null)
     {
-        return sprintf('%s/%s', $this->getBaseCoreUrl($core), $this->getConfigValue('query_uri'));
+        return sprintf('%s/%s', $this->getBaseCoreUrl($core), ltrim($this->getConfigValue('query_uri'), '/'));
     }
 
     /**
@@ -108,7 +108,7 @@ class SolrHelperService
      */
     public function getUpdateUrl($core = null)
     {
-        return sprintf('%s/%s', $this->getBaseCoreUrl($core), $this->getConfigValue('update_uri'));
+        return sprintf('%s/%s', $this->getBaseCoreUrl($core), ltrim($this->getConfigValue('update_uri'), '/'));
     }
 
     /**

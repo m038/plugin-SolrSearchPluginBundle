@@ -28,7 +28,7 @@ class AddDefaultCoreFieldSubscriber implements EventSubscriberInterface
         if (
             is_array($data) && array_key_exists('enabled', $data) &&
             $data['enabled'] == 1 &&
-            array_key_exists('host', $data) && array_key_exists('port', $data)
+            array_key_exists('host', $data) && array_key_exists('port', $data) && array_key_exists('suffix_uri', $data)
         ) {
             $options = $form->getConfig()->getOptions();
             $helper = $options['helper'];
@@ -38,6 +38,9 @@ class AddDefaultCoreFieldSubscriber implements EventSubscriberInterface
             }
             if ($data['port'] != $helper->getConfigValue('port')) {
                 $helper->setConfigValue('port', $data['port']);
+            }
+            if ($data['suffix_uri'] != $helper->getConfigValue('suffix_uri')) {
+                $helper->setConfigValue('suffix_uri', $data['suffix_uri']);
             }
 
             try {
