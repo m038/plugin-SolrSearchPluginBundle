@@ -94,7 +94,7 @@ class SearchController extends Controller
 
         // Only needed for output to browser
         if (array_key_exists('format', $parameters)) {
-            unset($solrParameters['format']);
+            unset($parameters['format']);
         }
 
         $query = new SolrQuery($parameters);
